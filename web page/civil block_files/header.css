@@ -1,0 +1,313 @@
+p {
+    text-align: center;
+  }
+  
+  .toggle,
+  [id^=drop] {
+    display: none;
+  }
+  
+  nav {
+    margin: 0;
+    padding: 0;
+    /* background-color: #254441; */
+  }
+  
+  #logo {
+    display: block;
+    padding: 0 30px;
+    float: left;
+    font-size: 20px;
+    line-height: 60px;
+  }
+  
+  nav:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  nav ul {
+    float: left;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+  }
+  
+  a:hover{
+    text-decoration: none !important;
+  }
+  nav ul li {
+    margin: 0px;
+    display: inline-block;
+    float: left;
+    /* background-color: #254441; */
+  }
+  
+  nav a {
+    display: block;
+    color: black;
+    font-size: 15px;
+    padding: 10px;
+    /* line-height: 60px; */
+    text-decoration: none;
+  }
+  
+  nav ul li ul li:hover {
+    background: #777;
+  }
+  
+  .menu>li> a:hover {
+    color: var(--kappel);
+  }
+  
+  nav ul ul {
+    display: none;
+    position: absolute;
+    /* top: 45px */
+  }
+  
+  nav ul li:hover>ul {
+    display: inherit;
+    background-color: #f3eeee;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  nav ul ul li {
+    width: 220px;
+    float: none;
+    display: list-item;
+    position: relative;
+  }
+  
+  nav ul ul ul li {
+    position: relative;
+    top: -45px;
+    left: 220px;
+    background-color: #f3eeee;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .menu li ul ul {
+    height: -webkit-fill-available
+  }
+  .dept{
+    max-height: 500px;
+      overflow-y: auto;
+      width: 450px;
+      top: -45px;
+      overflow-x: hidden;
+      position: relative;
+  
+  }
+  .dept1 {
+    max-height: 408px;
+    overflow-y: auto;
+    width: 230px;
+    top: 0px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.dept12{
+  max-height: 408px;
+  overflow-y: auto;
+  width: 230px;
+  top: 0px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+  /* Default style for .header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--white);
+  /* padding-block: 12px; */
+  box-shadow: var(--shadow-1);
+  z-index: 4;
+}
+
+/* Alternate style for .header when checkbox is checked */
+.header.alt {
+  position: fixed;
+  top: 0;
+  overflow: scroll;
+  height: -webkit-fill-available;
+  left: 0;
+  width: 100%;
+  background-color: var(--white);
+  /* padding-block: 12px; */
+  box-shadow: var(--shadow-1);
+  z-index: 4;
+}
+
+.dept li{
+  top: 0;
+}
+  .menu ul a:hover{
+    color: inherit;
+  }
+  /* Media Queries
+    --------------------------------------------- */
+  
+  @media all and (max-width : 991px) {
+  
+    .header .mobile-logo {
+      display: block !important;
+      padding: 0;
+      width: auto;
+      text-align: center;
+      float: none;
+    }
+
+    .toggle-arrow-btn{
+      font-weight: 500;
+      font-size: 50px;
+    }
+    .header .desktop-logo{
+        display: none !important;
+    }
+
+    .header .container{
+        display: block !important ;
+    }
+  
+    nav {
+      margin: 0;
+    }
+  
+    .toggle+a,
+    .menu {
+      display: none;
+    }
+  
+    @media (max-width: 991px){
+      .toggle {
+        display: flex;
+        /* background-color: #f3eeee; */
+        padding: 8px 10px;
+        font-weight: var(--fw-500);
+        /* color: #000000; */
+        line-height: 40px;
+        margin: 0;
+        text-decoration: none;
+        border: none;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 15px;
+    }
+
+    }
+
+    .dept {
+      max-height: none;
+      overflow-y: inherit;
+      width: 100%;
+      /* top: -45px; */
+      overflow-x: inherit;
+      position: inherit;
+  }
+  .dept1 {
+    max-height: -webkit-fill-available;
+    overflow-y: auto;
+    width: auto;
+    top: 0px;
+    overflow-x: hidden;
+    position: relative;
+}
+    .navbar-link{
+      line-height: 40px;
+    }
+  
+    .toggle:hover {
+    }
+  
+    [id^=drop]:checked+ul {
+      display: block;
+    }
+  
+    nav ul li {
+      display: block;
+      width: 100%;
+    }
+  
+    nav ul ul .toggle,
+    nav ul ul a {
+      padding: 15px 40px;
+    }
+  
+    nav ul ul ul a {
+      padding: 15 80px;
+    }
+  
+   
+    nav ul ul ul a {
+      background-color: #777;
+    }
+  
+    nav ul li ul li .toggle,
+    nav ul ul a {
+      background-color: #777;
+    }
+  
+    nav ul ul {
+      float: none;
+      position: static;
+      color: #ffffff;
+    }
+  
+    nav ul ul li:hover>ul,
+    nav ul li:hover>ul {
+      display: none;
+    }
+  
+    nav ul ul li {
+      display: block;
+      width: 100%;
+    }
+  
+    nav ul ul ul li {
+      position: static;
+  
+    }
+
+    .menu li ul ul {
+      height: 100%
+    }
+
+    .header.alt {
+      position: fixed;
+      top: 0;
+      overflow: scroll;
+      height: 100%;
+      left: 0;
+      width: 100%;
+      background-color: var(--white);
+      /* padding-block: 12px; */
+      box-shadow: var(--shadow-1);
+      z-index: 4;
+    }
+    .dept1 {
+      max-height: 100%;
+      overflow-y: auto;
+      width: auto;
+      top: 0px;
+      overflow-x: hidden;
+      position: relative;
+  }
+  }
+  
+  @media all and (max-width : 330px) {
+  
+    nav ul li {
+      display: block;
+      width: 94%;
+    }
+  
+  }
+
+  
